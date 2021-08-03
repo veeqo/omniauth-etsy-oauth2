@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
+require 'omniauth-etsy-oauth2'
+
+OmniAuth.config.logger = Logger.new('/dev/null')
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
