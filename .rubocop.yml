@@ -16,3 +16,6 @@ Style/StringLiteralsInInterpolation:
 
 Style/MethodCallWithArgsParentheses:
   Enabled: false
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: true
