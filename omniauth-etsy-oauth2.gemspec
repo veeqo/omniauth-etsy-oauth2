@@ -32,4 +32,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'omniauth-oauth2', '~> 1.4'
 
   spec.add_development_dependency 'rubocop-shopify', '~> 2.2.0'
+  spec.add_development_dependency 'rake', '~> 12'
+  spec.add_development_dependency 'rspec', '~> 3.5'
 end

@@ -89,8 +89,8 @@ PLATFORMS
 
 DEPENDENCIES
   omniauth-etsy-oauth2!
-  rake (~> 12.0)
-  rspec (~> 3.0)
+  rake (~> 12)
+  rspec (~> 3.5)
   rubocop-shopify (~> 2.2.0)
 
 BUNDLED WITH
