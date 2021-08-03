@@ -9,7 +9,8 @@ module OmniAuth
       option :callback_url
 
       option :setup, lambda { |env|
-        strategy = env['omniauth.strategy']
+        strategy = env&.dig('omniauth.strategy')
+        return unless strategy
 
         etsy_auth_params = strategy.session['etsy.omniauth_params'] ||
           strategy.session['omniauth.params'] ||
