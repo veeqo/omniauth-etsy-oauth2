@@ -22,6 +22,7 @@ module OmniAuth
       }
 
       uid { URI.parse(options[:client_options][:site]).host }
+      credentials { user_credentials }
 
       def setup_phase
         options.scope = preprocessed_scopes
@@ -34,6 +35,12 @@ module OmniAuth
       end
 
       private
+
+      def user_credentials
+        self.class.superclass.credentials_stack(self).first.merge(
+          'expires_in' => access_token.expires_in.to_i
+        )
+      end
 
       def preprocessed_scopes
         Array(options.scope).join(' ')
