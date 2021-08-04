@@ -35,7 +35,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
            ENV['ETSY_API_SECRET'],
            response_type: 'code',
            callback_path: '/auth/etsy/callback',
-           callback_url: 'http://localhost:3000/auth/etsy/callback',
            scope: %w[listings_r listings_w transactions_r transactions_w email_r address_r billing_r]
 end
 ```
@@ -55,7 +54,8 @@ Here's an example *Authentication Hash* available in `request.env['omniauth.auth
     token: 'access_token',
     refresh_token: 'refresh_token',
     expires_at: 1627977818,
-    expires: true
+    expires: true,
+    expires_in: 3600
   }
 }
 ```
