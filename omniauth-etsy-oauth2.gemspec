@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Ulan Djamanbalaev']
   spec.email         = ['udjamanbalaev@gmail.com']
 
-  spec.summary       = 'Etsy strategy for OmniAuth'
+  spec.summary       = 'Etsy OAuth2 strategy for OmniAuth 1.0'
   spec.homepage      = 'https://github.com/veeqo/omniauth-etsy-oauth2'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
