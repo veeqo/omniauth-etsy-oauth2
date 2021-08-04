@@ -38,7 +38,8 @@ module OmniAuth
 
       def user_credentials
         self.class.superclass.credentials_stack(self).first.merge(
-          'expires_in' => access_token.expires_in.to_i
+          'expires_in' => access_token.expires_in.to_i,
+          'user_id' => access_token.token.split('.').first
         )
       end
 

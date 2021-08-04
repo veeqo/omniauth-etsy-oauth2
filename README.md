@@ -55,7 +55,8 @@ Here's an example *Authentication Hash* available in `request.env['omniauth.auth
     refresh_token: 'refresh_token',
     expires_at: 1627977818,
     expires: true,
-    expires_in: 3600
+    expires_in: 3600,
+    user_id: 'user_id'
   }
 }
 ```
