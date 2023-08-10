@@ -27,6 +27,7 @@ module OmniAuth
       def setup_phase
         options.scope = preprocessed_scopes
         options.client_options.merge!(urls)
+        options.client_options.merge!(auth_scheme: :request_body)
         super
       end
 
