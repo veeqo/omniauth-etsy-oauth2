@@ -31,7 +31,8 @@ module OmniAuth
       end
 
       def callback_url
-        options[:callback_url] || full_host + script_name + callback_path
+        # full_host removed because it disturbs the generated redirect_url
+        options[:callback_url] || script_name + callback_path
       end
 
       private
